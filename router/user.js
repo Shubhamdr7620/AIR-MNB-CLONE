@@ -6,6 +6,10 @@ const router=express.Router({mergeParams:true})
 const passport = require("passport")
 const userController=require("../controller/user")
 
+router.get("/",(req,res)=>
+{
+    res.redirect("/properties")
+})
 
 router.get("/signup",userController.signUpForm)
 
