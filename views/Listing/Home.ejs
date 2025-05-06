@@ -1,0 +1,29 @@
+<% layout('layout/boilerplate') %>
+
+<body>
+    <div class="container mt-4">
+      <div class="row g-3">
+        <% for(let prop of data) { %>
+           
+          <div class="col-md-4">
+            <a class="card-link" href="/properties/<%= prop.id %>"> 
+            <div class="card" style="height: 360px; width: 100%;">
+              <img class="card-img-top" src="<%= prop.image.url %>" alt="Card image" style="height: 160px; object-fit: cover;">
+              <div class="card-body p-2">
+                <h5 class="card-title fs-6 mb-1"><%= prop.title %></h5>
+                <p class="card-text fs-6 mb-2" style="line-height: 1.2em;"><%= prop.description %></p>
+              
+                <!-- Price and location stacked with tight spacing -->
+                <h6 class="card-price fs-6 fw-semibold mb-1">₹ <%= prop.price %></h6>
+                <h6 class="card-price fs-6 text-muted mb-0"><%= prop.location %></h6>
+              </div>
+              
+            </div>
+        </a>
+          </div>
+        
+        <% } %>
+      </div>
+    </div>
+  </body>
+  

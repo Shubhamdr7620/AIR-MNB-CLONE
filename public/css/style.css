@@ -1,0 +1,161 @@
+.form-container {
+  animation: fadeIn 0.8s ease;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h4 {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  border-color: #0d6efd;
+  transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"] {
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0b5ed7 !important;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  margin: 1rem;
+}
+
+.card-img {
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.container {
+  flex: 1;
+}
+
+.navbar {
+  background-color: #f8f9fa !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1030;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+body, html {
+  min-height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ✅ Updated Footer Styling */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+footer .social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer hr {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 10px 0;
+}
+
+.review-card .card {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.review-card .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.review-card .col-md-4 {
+  flex: 1 1 30%;
+}
+
+.airbnb-signup-body {
+  background: linear-gradient(to right, #f2709c, #ff9472);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.airbnb-signup-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.airbnb-signup-form {
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  animation: airbnb-fade-in 0.9s ease;
+}
+
+@keyframes airbnb-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.login-wrapper {
+  height: 100vh;
+}
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+

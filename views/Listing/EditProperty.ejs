@@ -1,0 +1,68 @@
+<%- layout('layout/boilerplate.ejs') %>
+
+<body>
+  <!-- Main Content Area -->
+  <div class="container mt-4">
+    <!-- Headline -->
+    <h2 class="text-center mb-4">Edit Property Form</h2>
+
+    <!-- Form centered on the page -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        
+        <!-- Displaying Image with ideal size -->
+        <div class="text-center mb-4">
+          <img src="<%= data.image.url %>" alt="Property Image" class="img-fluid" style="max-width: 100%; height: auto; max-height: 200px;">
+        </div>
+
+        <form method="POST" action="/properties/<%= data.id %>/edit?_method=PUT" class="border p-4 rounded shadow-sm needs-validation" novalidate enctype="multipart/form-data">
+
+          <!-- Title input -->
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" id="title" value="<%= data.title %>" name="title" placeholder="Enter New Title" class="form-control" required/>
+            <div class="invalid-feedback">Enter correct title</div>
+          </div>
+
+          <!-- Description input -->
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" name="description" class="form-control" placeholder="Enter Description" required><%= data.description %></textarea>
+            <div class="invalid-feedback">Enter correct description</div>
+          </div>
+
+          <!-- Image input -->
+          <div class="mb-3">
+            <label for="image" class="form-label">Upload New Image</label>
+            <input type="file" id="image" name="image" class="form-control" />
+            <div class="invalid-feedback">Upload valid image</div>
+          </div>
+
+          <!-- Price input -->
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" id="price" value="<%= data.price %>" name="price" placeholder="Enter Price" class="form-control" />
+            <div class="invalid-feedback">Enter correct price</div>
+          </div>
+
+          <!-- Location input -->
+          <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" id="location" value="<%= data.location %>" name="location" placeholder="Enter New Location" class="form-control" required />
+            <div class="invalid-feedback">Enter correct location</div>
+          </div>
+
+          <!-- Country input -->
+          <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" id="country" value="<%= data.country %>" name="country" placeholder="Enter New Country" class="form-control" required/>
+            <div class="invalid-feedback">Enter correct country</div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100">Edit Property</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

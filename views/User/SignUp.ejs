@@ -1,0 +1,30 @@
+<% layout('layout/boilerplate') %>
+
+<body class="airbnb-signup-body">
+    <div class="airbnb-signup-container">
+      <div class="airbnb-signup-form">
+        <h3 class="text-center mb-4">Create Your Account</h3>
+        <form class="needs-validation" method="POST" action="/signup" novalidate>
+          <div class="mb-3">
+            <label for="airbnb-username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="airbnb-username" placeholder="Enter your username" name="username" required />
+            <div class="invalid-feedback"> Enter Correct Username</div>
+          </div>
+          <div class="mb-3">
+            <label for="airbnb-email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="airbnb-email" placeholder="Enter your email" name="email" required />
+            <div class="invalid-feedback"> Enter Correct Email</div>
+          </div>
+          <div class="mb-3">
+            <label for="airbnb-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="airbnb-password" placeholder="Enter your password" name="password"  required />
+            <div class="invalid-feedback"> Enter Correct Password</div>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-danger">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+  </body>
